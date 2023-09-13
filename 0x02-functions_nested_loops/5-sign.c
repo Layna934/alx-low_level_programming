@@ -4,7 +4,6 @@
 /**
  * print_sign - prints sign of numbers
  *@n: The number whose sign will be printed
-
  * Return: 1 for +, 0 for 0, -1 for -
  */
 
