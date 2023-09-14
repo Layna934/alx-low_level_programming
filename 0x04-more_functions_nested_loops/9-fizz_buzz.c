@@ -19,6 +19,8 @@ int main(void)
 		if (p % 5 == 0)
 		{
 			printf("%s ", y);
+			if (p % 5 == 0 && p == 100)
+				printf("%s\n", y);
 		}
 		else if (p % 3 == 0)
 		{
@@ -31,6 +33,5 @@ int main(void)
 		else
 			printf("%d ", p);
 	}
-	putchar('\n');
 	return (0);
 }
