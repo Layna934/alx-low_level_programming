@@ -9,22 +9,10 @@
   *Return: the length
   */
 
-/**int _strlen_recursion(char *s)
-{
-	int count = strlen(s);
-
-	return (count);
-}
-*/
 
 int _strlen_recursion(char *s)
 {
-	int count;
+	int count = strlen(s);
 
-	if (*s != '\0')
-	{
-		int length = _strlen_recursion(s + 1);
-		count = length + 1;
-	}
 	return (count);
 }
