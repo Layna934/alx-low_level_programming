@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
-  *create array - creates an array of characters
+  *create_array - creates an array of characters
   *@size: number of array elements
   *@c: specific character to be found in each element space
   *
@@ -13,7 +13,7 @@
 
 char *create_array(unsigned int size, char c)
 {
-	char *ptR = malloc (size * sizeof(char));
+	char *ptR = malloc(size * sizeof(char));
 	unsigned int count;
 
 	for (count = 0; count < size; count++)
