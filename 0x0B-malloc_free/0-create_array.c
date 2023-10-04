@@ -20,5 +20,8 @@ char *create_array(unsigned int size, char c)
 	{
 		*(ptR + count) = c;
 	}
-	return (ptR);
+	if (size > 0)
+		return (ptR);
+	else
+		return (NULL);
 }
