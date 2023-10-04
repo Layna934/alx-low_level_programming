@@ -16,6 +16,9 @@ char *_strdup(char *str)
 	size_t count;
 	char *ptRstr = malloc(length * sizeof(char));
 
+	if (ptRstr == NULL)
+		return (NULL);
+
 	for (count = 0; count < length; count++)
 	{
 		*(ptRstr + count) = *(str + count);
