@@ -26,7 +26,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("%s", str);
 		}
-		/**if (i == lastv)
+		/**
+		*if (i == lastv)
 		*	printf("\n");
 		*else
 		*{
@@ -42,5 +43,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (i != lastv && separator != NULL)
 			printf("%s", separator);
 	}
+	printf("\n");
 	va_end(printString);
 }
