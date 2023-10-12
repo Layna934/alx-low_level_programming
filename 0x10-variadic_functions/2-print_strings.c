@@ -40,7 +40,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		*}
 		*/
 
-		if (i != lastv && separator != NULL)
+		if (i != lastv && separator != NULL && separator[0] != '\0')
 			printf("%s", separator);
 	}
 	printf("\n");
