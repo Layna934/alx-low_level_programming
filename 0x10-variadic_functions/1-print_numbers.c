@@ -4,8 +4,8 @@
 
 /**
   *print_numbers - prints numbers
-  *separator: string used to separate numbers
-  *n: number of arguments added by user
+  *@separator: string used to separate numbers
+  *@n: number of arguments added by user
   *
   *Return: void
   */
@@ -18,7 +18,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(list, n);
 	for (i = 0; i < n; i++)
 	{
-		
 		printf("%d", va_arg(list, int));
 
 		if (i != lastv && separator != NULL)
