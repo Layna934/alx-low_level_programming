@@ -28,7 +28,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 
 		if (i != lastv && separator != NULL)
-			printf("%s ", separator);
+			printf("%s", separator);
 	}
 	va_end(printString);
 	printf("\n");
