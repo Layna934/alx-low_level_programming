@@ -26,14 +26,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("%s", str);
 		}
-		if (i == lastv)
-			printf("\n");
-		else
-		{
-			if (separator == NULL)
-				printf(" ");
-			else
-				printf("%s ", separator);
-		}
+
+		if (i != lastv && separator != NULL)
+			printf("%s ", separator);
 	}
+	va_end(printString);
+	printf("\n");
 }
