@@ -4,11 +4,11 @@
 #include <string.h>
 
 /**
-  *print_all - prints all
-  *@format: the format specifier
-  *
-  *Return: nothing
-  */
+ *print_all - prints all
+ *@format: the format specifier
+ *
+ *Return: nothing
+ */
 
 void print_all(const char * const format, ...)
 {
@@ -24,33 +24,33 @@ void print_all(const char * const format, ...)
 					char val = va_arg(flist, int);
 
 					printf("%c", val);
-				}
-				break;
+					break; }
 			case 'i':	{
 					int val = va_arg(flist, int);
 
 					printf("%d", val);
-				}
-				break;
-			case 'f':       {
+					break; }
+			case 'f':	{
 						float val = va_arg(flist, double);
 
 						printf("%f", val);
-					}
-                                  break;
+						break; }
 			case 's':	{
-						char * val = va_arg(flist, char *);
+					char *val = va_arg(flist, char *);
 
+					if (val == NULL)
+						printf("(nil)");
+					else
 						printf("%s", val);
-					}
-					break;	  
+					break; }
 			default:
 				break;
 		}
 		m++;
-		va_end(flist);
-		while (m < length -1)
-			if (format[m] ='c' || format[m] = 'i' || format[m] = 'f' || format[m] = 's')
-				printf(", ");
+		if ((m < length) && (format[m] == 'c' || format[m] == 'i' || format[m] == 'f' || format[m] == 's'))
+			printf(", ");
 	}
+
+	va_end(flist);
+	printf("\n");
 }
