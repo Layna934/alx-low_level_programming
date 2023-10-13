@@ -36,7 +36,7 @@ void print_all(const char * const format, ...)
 						printf("%f", val);
 						break; }
 			case 's':	{
-					char *val = va_arg(flist, char *);
+					const char *val = va_arg(flist, const char *);
 
 					if (val == NULL)
 						printf("(nil)");
