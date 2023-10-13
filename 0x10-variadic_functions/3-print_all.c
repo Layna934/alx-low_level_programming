@@ -20,19 +20,23 @@ void print_all(const char * const format, ...)
 	{
 		switch (format[m])
 		{
-			case 'c':	{char val = va_arg(flist, int);
+			case 'c':	{
+					char val;
 
-					printf("%c", val);
+					printf("%c", val = va_arg(flist, int));
 					break; }
-			case 'i':	{int val = va_arg(flist, int);
+			case 'i':	{
+					int val;
 
-					printf("%d", val);
+					printf("%d", val = va_arg(flist, int));
 					break; }
-			case 'f':	{float val = va_arg(flist, double);
+			case 'f':	{
+						float val = va_arg(flist, double);
 
 						printf("%f", val);
 						break; }
-			case 's':	{char *val = va_arg(flist, char *);
+			case 's':	{
+					char *val = va_arg(flist, char *);
 
 					if (val == NULL)
 						printf("(nil)");
@@ -40,13 +44,12 @@ void print_all(const char * const format, ...)
 						printf("%s", val);
 					break; }
 			default:
-				break;
+					break;
 		}
 		m++;
 		if ((m < length) && (format[m] == 'c' || format[m] == 'i' ||
 					format[m] == 'f' || format[m] == 's'))
-			printf(", ");
-	}
+			printf(", ");	}
 	va_end(flist);
 	printf("\n");
 }
