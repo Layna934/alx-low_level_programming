@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
-  *binary_to_unit - changes binary string to unint
+  *binary_to_uint - changes binary string to unint
   *@b: the string
   *
   *Return: the unsigned int value
